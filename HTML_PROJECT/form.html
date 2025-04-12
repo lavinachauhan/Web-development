@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+</head>
+<body>
+    <h2>HTML form</h2>
+    <form>
+        <!-- text -->
+        <label for="Description">Tell me about your self</label>
+        <input type="text" id = "description" name = "description" placeholder = "introduction">
+        <br>
+        <!-- email -->
+        <label for="email">Enter your email:</label>
+        <input type="email" id = "email" name = "email" placeholder = "enter email">
+        <br>
+
+
+        <!-- radio button -->
+        <label for="english">Select english</label>
+        <input type="radio" id = "english" name = "english">
+        <label for="hindi"> Select hindi</label>
+        <input type="radio" id = "hindi" name = "hindi">
+        <label for="punjabi"> Select punjabi</label>
+        <input type="radio" id = "punjabi" name = "punjabi">
+
+        <!-- check box -->
+        <br>
+        <label for="checkbox1">haridwar</label>
+        <input type="checkbox" id = checkbox1 name = checkbox1>
+        <label for="checkbox2">delhi</label>
+        <input type="checkbox" id = checkbox2 name = checkbox2>
+        <label for="checkbox3">noida</label>
+        <input type="checkbox" id = checkbox3 name = checkbox3>
+        <br>
+
+        <button>I'm the button</button><br>
+
+        <!-- datepicker -->
+        <label for="datepicker">Choose the date</label>
+        <input type = "date" id = datepicker name = datepicker>
+        <br>
+
+        <!-- password -->
+        <label for="password">Enter password</label>
+        <input type="password" id = password name = password placeholder = "enter password">
+        <br>
+        <!-- submit -->
+        <input type="submit" id = submit name = submit value = submit>
+
+        <!-- select -->
+        <br>
+        <label for="selector1">Choose your dish:</label>
+        <select name="dishes" id="selector1">
+            <option value="maggie">maggie</option>
+            <option value="chole bhature">chole bhature</option>
+            <option value="fried rice">fried rice</option>
+        </select>
+        <br>
+        
+        <!-- text area -->
+        <label for="textarea">Enter description here</label>
+        <textarea name="textarea1" id="textarea" cols="10" rows="2" placeholder="Enter Text"></textarea>
+        <br>
+
+        <!-- field set -->
+        <fieldset>
+
+            <legend>HTML dummy form</legend>
+            <!-- file select -->
+            <label for="fileselect">choose file:</label>
+            <input type="file" id = fileselect name = fileselect> 
+
+            <!-- image -->
+            <br>
+            <input type="image" id = image name = image
+            alt = "click here" src = "Screenshot 2025-03-16 221118.png" height="100px">
+
+
+
+        </fieldset>
+       
+    </form>
+</body>
+</html>

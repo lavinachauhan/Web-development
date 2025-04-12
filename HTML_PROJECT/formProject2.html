@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+</head>
+<body>
+    <form>
+        <h2>Job Application</h2>
+        <label for="name">Name:</label><br/>
+        <input type="text" id = "name" name = "name"><br/>
+
+        <label for="email">Email:</label><br/>
+        <input type="email" id = "email" name = "email"><br/>
+
+        <label for="phone">Phone:</label><br/>
+        <input type="tel" id = "phone" name = "phone" ><br/>
+
+        <label for="Resume">Resume:</label><br/>
+        <input type="file" id = "Resume" name = "Resume"><br/>
+
+        <label for="experience">Experience(years)</label><br/>
+        <input type="number" id = "experience" name = "experience" min = "1" max = "5"><br/>
+
+        <fieldset>
+            <legend>Skills:</legend>
+            <label for="box1">HTML</label><br/>
+            <input type="checkbox" id = "box1" name = "box1"><br/>
+            <label for="box2">CSS</label><br/>
+            <input type="checkbox" id = "box2" name = "box2"><br/>
+            <label for="box3">Java script</label><br/>
+            <input type="checkbox" id = "box3" name = "box3"><br/>
+        </fieldset>
+
+        <label for="education">Highest Education:</label>
+        <select name="education" id="education">
+            <option value="High School">High School</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Graduation">Graduation</option>
+        </select><br/>
+        <p>Availability:</p>
+        <label for="box1">Full time</label><br/>
+        <input type="radio" id = "box1" name = "box1"><br/>
+        <label for="box2">Parttime</label><br/>
+        <input type="radio" id = "box2" name = "box2"><br/>
+        
+        <label for="comment">Additional Comments:</label><br>
+        <textarea name="comment" id="comment" cols="20" rows = "5"></textarea>
+        <button>submit application</button>
+   
+
+    </form>
+    
+</body>
+</html>
