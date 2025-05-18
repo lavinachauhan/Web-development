@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0px;
+            padding :0px;
+        }
+        .parent{
+            border: 2px solid black;
+            /* overflow htane ke baad jo 
+            problem aati h use bolte hai collapse*/
+            overflow : scroll;
+        }
+        .item{
+            width:200px;
+            height: 200px;
+            border :2px solid black;
+            margin: 20px;
+            float :left;
+            background-color: aqua;
+        }
+        #item1{
+            float : right;
+        }
+        #item2{
+            float : right;
+        }
+        #item3{
+            float: right;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="item" id = "item1">A</div>
+        <div class="item" id = "item2">B</div>
+        <div class="item" id = "item3">C</div>
+    </div>
+</body>
+</html>

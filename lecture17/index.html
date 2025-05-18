@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 10px black solid;
+            height: 8000px;
+        }
+        /* .conatainer{
+            border: 10px black solid;
+            height: 8000px;
+            background-color: aquamarine;
+        } */
+        .box{
+            border: 10px black solid;
+            height: 8000px;
+            background-color: rgb(54, 24, 134);
+        }
+        img{
+            margin: 10px;
+        }
+        .image1{
+            position :relative;
+            top : 100px;
+            position: absolute;
+            top : 300px;
+        }
+        .image2{
+            position :relative;
+            top : 100px;
+            /* position: absolute;
+            top : 300px;
+            left :400px; */
+        }
+        .image4{
+            position :fixed;
+        }
+
+        .image3{
+            position :sticky;
+            top : 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="butterfly1.jpg" alt="poster1" class="image1">
+        <img src="butterfly2.jpg" alt="poster2" class="image2">
+        <img src="butterfly3.jpg" alt="poster3" class="image3">
+        <img src="butterfly4.jpg" alt="poster4" class="image4">
+    </div>
+    <div class = "box"> </div>
+</body>
+</html>
