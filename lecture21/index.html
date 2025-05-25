@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height : 300px;
+            width: 400px;
+            background-color: aqua;
+            border: 3px solid black;
+        }
+
+        /* agr width 500px se jyada hui to colour change kr denge */
+        /* @media (min-width:500px) {
+            .box{
+                background-color: chartreuse;
+            }
+        } */
+
+        /* agr width max-width se jyada hui to colour change kr denge  */
+       /* agr 300 se 500 px ke bich m h to green kr denge wrna aqua hi */
+        @media (max-width:300px) and (max-width:500px) {
+            .box{
+                background-color: chartreuse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Hello ji
+    </div>
+</body>
+</html>
