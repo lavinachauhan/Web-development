@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            width: 100%;
+            height: 100vh;
+            background: #a2e9fc;
+            background: radial-gradient(circle, rgba(162, 233, 252, 1) 0%,
+            rgb(205, 194, 241) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contentBox{
+            width: 280px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+        .contentBox img{
+            height: 60%;
+            width: 95%;
+            padding: 10px;
+            border-radius: 25px;
+        }
+        .contentBox h2{
+           /* padding: 10px; */
+           font-weight: bold;
+           font-size: 1.5rem;
+        }
+        .containerBox p{
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contentBox">
+            <img src="qr.jpg">
+            <h2>
+                Improve your frontend skills by building projects
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Hic quos magni voluptatum
+                velit vero quo doloribus reprehenderit ducimus.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
