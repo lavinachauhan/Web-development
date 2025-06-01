@@ -21,9 +21,9 @@ nav{
     width: 100%;
     /* border: 2px solid black; */
     /* background-color: rgb(158, 129, 235); */
-    background: #3377a1;
-    background: linear-gradient(90deg, rgb(42, 76, 97) 0%,
-     rgb(46, 46, 156) 0%, rgba(0, 212, 255, 1) 100%);
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     min-height: 80px;
     display:flex;
     justify-content: center;
@@ -33,8 +33,8 @@ nav{
 }
 
 .container{
-    width: vw;
-    height: 1000vh;
+    width: 100%;
+    height: 100%;
     /* border: 2px solid black; */
     background: #d7fbfc;
     background: linear-gradient(90deg, rgba(215, 251, 252, 1) 0%,
@@ -62,9 +62,9 @@ a{
 }
 
 .footerBox{
-    background: #3377a1;
-    background: linear-gradient(90deg, rgb(42, 76, 97) 0%,
-    rgb(46, 46, 156) 0%, rgba(0, 212, 255, 1) 100%);
+      background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     min-height: 30px;
     width: 100%;
     position: relative;
@@ -87,7 +87,7 @@ a{
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 10px;
     box-shadow: 0px 0px 30px black;
 }
 
@@ -100,7 +100,7 @@ a{
 }
 
 .rightbox img{
-    height: 400px;
+    height: 300px;
     width: 200px;
     border-radius: 20px;
     transition: all 0.6s linear 0s;
@@ -118,6 +118,7 @@ a{
     justify-content: center;
     border-radius: 20px;
     opacity: 0;
+    transition: all 0.3s linear 0s;
 }
 
 .rightbox .overlay span{
@@ -125,17 +126,22 @@ a{
     font-size: 1.2rem;
     
 }
-.rightbox :hover .overlay{
+.rightbox:hover .overlay{
     opacity: 1;
 }
-.rightbox img:hover{
+.rightbox:hover{
     transform: scale(0.9);
 
 }
 
 .rightbox{
     position: relative;
-    /* overflow: hidden; */
+    /* overflow-x: hidden; */
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s linear 0s;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 20px;
 }
 
 .leftbox{
