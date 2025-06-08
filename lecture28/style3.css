@@ -1,0 +1,27 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.384);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    /* gap: 30px; */
+    align-items: stretch;
+    justify-items: stretch;
+    
+
+}
+
+.items{
+    /* width: 100px;
+    height: 100px; */
+    background-color:pink;
+    border: 3px solid white;
+   
+}
