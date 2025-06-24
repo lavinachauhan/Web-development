@@ -292,6 +292,7 @@
 
             .company-container{
             justify-content: center;
+            margin: 0 auto;
             }
 
             .company-title{
@@ -300,3 +301,124 @@
             }
         
         }
+
+        .card_container{
+            align-items: center;
+            padding: 2rem 0; 
+            margin: 0 auto ;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .card_content{
+            max-width: 700px;
+            flex-direction: column;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .card_description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .heading{
+            font-size: 1.5rem;
+        }
+
+        .card_para{
+            color: grey;
+            font-size: 1rem;
+        }
+        .card_grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+
+        .icon_container img{
+                height: 1.5rem;
+                width: 1.5rem;
+        }
+
+        .icon_container{
+            background-color: white;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            padding: 1.6rem;
+            margin-top: 1rem;
+        }
+
+        .cards_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .card_title{
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .description{
+            color: white;
+        }
+
+        .cards:nth-child(1)
+        {
+            background-color: #4A90E2;
+        }
+        
+        .cards:nth-child(2)
+        {
+            background-color: #FF6289;
+        }
+
+        .cards:nth-child(3)
+        {
+            background-color: #FCBF58;
+        }
+
+        .cards:nth-child(4)
+        {
+            background-color: #44BFC3;
+        }
+
+        .cards:nth-child(5)
+        {
+            background-color: #77B05D;
+        }
+
+        .cards:nth-child(6)
+        {
+            background-color: #7B78B1;
+        }
+
+
+       @media screen and (max-width: 735px){
+        .card_grid{
+            grid-template-columns: repeat(1,1fr);
+            margin: 0 2rem;
+        }
+        
+       }
