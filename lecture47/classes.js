@@ -4,6 +4,8 @@
     age;
     #weight = 50; //using hashtag we can mark data member private
     height = 6;
+
+    //constructor
     constructor(newAge, newHeight, newWeight){
       this.age = newAge;
       this.height = newHeight;
@@ -43,3 +45,5 @@
 //getter is used to fetch the private field of the class
 //setter is used to set values of the private field
 //if we use getter and setter to access private field then we can say that we establish encapsulation in the class
+
+
