@@ -9,11 +9,20 @@ function outerFunction(){
     let name = "Sunita";
     function innerFunction(){
         console.log(name);
-    }
+    } 
     // innerFunction();
     //return  reference of inner function
     return innerFunction;
 }
+
+//jb outerfunction call hoga wo innerfunction ka 
+//reference return krega 
+//jb hum outerfunction ka scope khatam hone ke baad 
+// inner function ko call krenge to wo apne required data ke saath bind ho jaega
+//note -> is data ki copy nahi bani h iska reference share hua h
+//name ka reference innerFunction() ke saath bind ho jaega aur hum use 
+// print krwa paenge
+
 let inner = outerFunction();
 
 inner();
