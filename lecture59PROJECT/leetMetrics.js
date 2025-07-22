@@ -24,91 +24,92 @@ document.addEventListener("DOMContentLoaded", function(){
         return isMatching;
     }
 
-    async function fetchUserDetails(username){
+    // async function fetchUserDetails(username){
         
-        try{
-            searchButton.textContent = "Searching...";
-            searchButton.disabled = true;
-            // statsContainer.style.setProperty("display", none);
-    
-            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-            const targetUrl = 'https://leetcode.com/graphql/';
-
-            const myHeaders = new Headers();
-            myHeaders.append("content-type", "application/json");
-
-           const graphql = JSON.stringify({
-                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
-                variables: { "username": `${username}` }
-            })
-
-            const requestOptions = {
-                method: "POST",
-                headers: myHeaders,
-                body: graphql,
-            };
-
-            const response = await fetch(proxyUrl + targetUrl, requestOptions);
-            if(!response.ok){
-                throw new Error("Unable to fetch the user details");
-            }
-            const parsedData = await response.json();
-            console.log("Loggind data: ", parsedData);
-
-            displayUserData(parsedData);
-        }
-        catch(error){
-            statsContainer.innerHTML = `<p>${error.message}</p>`;
-        }
-        finally{
-            searchButton.textContent = "Search";
-            searchButton.disabled = false;
-        }
-
-    }
-
-    // //love bhaiya ka code
-    // async function fetchUserDetails(username) {
-
     //     try{
     //         searchButton.textContent = "Searching...";
     //         searchButton.disabled = true;
-    //         //statsContainer.classList.add("hidden");
-
-    //         // const response = await fetch(url);
-    //         const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
+    //         // statsContainer.style.setProperty("display", none);
+    
+    //         const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     //         const targetUrl = 'https://leetcode.com/graphql/';
-            
+
     //         const myHeaders = new Headers();
     //         myHeaders.append("content-type", "application/json");
 
-    //         const graphql = JSON.stringify({
+    //        const graphql = JSON.stringify({
     //             query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
     //             variables: { "username": `${username}` }
     //         })
+
     //         const requestOptions = {
     //             method: "POST",
     //             headers: myHeaders,
     //             body: graphql,
     //         };
 
-    //         const response = await fetch(proxyUrl+targetUrl, requestOptions);
-    //         if(!response.ok) {
-    //             throw new Error("Unable to fetch the User details");
+    //         const response = await fetch(proxyUrl + targetUrl, requestOptions);
+    //         if(!response.ok){
+    //             throw new Error("Unable to fetch the user details");
     //         }
     //         const parsedData = await response.json();
-    //         console.log("Logging data: ", parsedData) ;
+    //         console.log("Loggind data: ", parsedData);
 
     //         displayUserData(parsedData);
     //     }
-    //     catch(error) {
-    //         statsContainer.innerHTML = `<p>${error.message}</p>`
+    //     catch(error){
+    //         statsContainer.innerHTML = `<p>${error.message}</p>`;
     //     }
-    //     finally {
+    //     finally{
     //         searchButton.textContent = "Search";
     //         searchButton.disabled = false;
     //     }
+
     // }
+
+    //love bhaiya ka code
+    async function fetchUserDetails(username) {
+
+        try{
+            searchButton.textContent = "Searching...";
+            searchButton.disabled = true;
+            //statsContainer.classList.add("hidden");
+
+            // const response = await fetch(url);
+            //const proxyUrl = 'https://corsproxy.io/?';
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
+            const targetUrl = 'https://leetcode.com/graphql/';
+            
+            const myHeaders = new Headers();
+            myHeaders.append("content-type", "application/json");
+
+            const graphql = JSON.stringify({
+                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                variables: { "username": `${username}` }
+            })
+            const requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: graphql,
+            };
+
+            const response = await fetch(proxyUrl+targetUrl, requestOptions);
+            if(!response.ok) {
+                throw new Error("Unable to fetch the User details");
+            }
+            const parsedData = await response.json();
+            console.log("Logging data: ", parsedData) ;
+
+            displayUserData(parsedData);
+        }
+        catch(error) {
+            statsContainer.innerHTML = `<p>${error.message}</p>`
+        }
+        finally {
+            searchButton.textContent = "Search";
+            searchButton.disabled = false;
+        }
+    }
 
     function updateProgress(solved, total, label, circle){
         const progressDegress = (solved / total) * 100;
