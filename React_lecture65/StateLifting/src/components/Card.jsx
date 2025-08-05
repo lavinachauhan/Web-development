@@ -1,5 +1,5 @@
 import React from 'react'
-
+// sharing state between components
 const Card = (props) => {
   return (
     <div>

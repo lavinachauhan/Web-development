@@ -24,48 +24,48 @@ document.addEventListener("DOMContentLoaded", function(){
         return isMatching;
     }
 
-    // async function fetchUserDetails(username){
+    async function fetchUserDetails(username){
         
-    //     try{
-    //         searchButton.textContent = "Searching...";
-    //         searchButton.disabled = true;
-    //         // statsContainer.style.setProperty("display", none);
+        try{
+            searchButton.textContent = "Searching...";
+            searchButton.disabled = true;
+            // statsContainer.style.setProperty("display", none);
     
-    //         const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    //         const targetUrl = 'https://leetcode.com/graphql/';
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const targetUrl = 'https://leetcode.com/graphql/';
 
-    //         const myHeaders = new Headers();
-    //         myHeaders.append("content-type", "application/json");
+            const myHeaders = new Headers();
+            myHeaders.append("content-type", "application/json");
 
-    //        const graphql = JSON.stringify({
-    //             query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
-    //             variables: { "username": `${username}` }
-    //         })
+           const graphql = JSON.stringify({
+                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                variables: { "username": `${username}` }
+            })
 
-    //         const requestOptions = {
-    //             method: "POST",
-    //             headers: myHeaders,
-    //             body: graphql,
-    //         };
+            const requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: graphql,
+            };
 
-    //         const response = await fetch(proxyUrl + targetUrl, requestOptions);
-    //         if(!response.ok){
-    //             throw new Error("Unable to fetch the user details");
-    //         }
-    //         const parsedData = await response.json();
-    //         console.log("Loggind data: ", parsedData);
+            const response = await fetch(proxyUrl + targetUrl, requestOptions);
+            if(!response.ok){
+                throw new Error("Unable to fetch the user details");
+            }
+            const parsedData = await response.json();
+            console.log("Loggind data: ", parsedData);
 
-    //         displayUserData(parsedData);
-    //     }
-    //     catch(error){
-    //         statsContainer.innerHTML = `<p>${error.message}</p>`;
-    //     }
-    //     finally{
-    //         searchButton.textContent = "Search";
-    //         searchButton.disabled = false;
-    //     }
+            displayUserData(parsedData);
+        }
+        catch(error){
+            statsContainer.innerHTML = `<p>${error.message}</p>`;
+        }
+        finally{
+            searchButton.textContent = "Search";
+            searchButton.disabled = false;
+        }
 
-    // }
+    }
 
     //love bhaiya ka code
     async function fetchUserDetails(username) {
