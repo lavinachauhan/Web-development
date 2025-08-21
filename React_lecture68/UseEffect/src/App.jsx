@@ -2,10 +2,15 @@ import { useEffect, useLayoutEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import LoggerComponent from './components/LoggerComponent'
+import TimeComponent from './components/TimeComponent'
+import DataFetcher from './components/DataFetcher'
+import ResizeComponent from './components/ResizeComponent'
+import MultiEffectComponent from './components/MultiEffectComponent'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [total, setTotal] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [total, setTotal] = useState(0);
 
 
 // hamehsa dhyn rkhna h use effect hook
@@ -44,23 +49,40 @@ function App() {
 
 // variation 04
 // multiple dependencies
-useEffect(() => {
-  alert("I will run every time when count/total is updated")
-},[count, total])
+// useEffect(() => {
+//   alert("I will run every time when count/total is updated")
+// },[count, total])
 
 
-function handleClick(){
-  setCount(count + 1);
-}
+// variation 05
+// is baar let's add a cleanup function
 
-function handleClickTotal(){
-  setTotal(total + 1);
-}
+// useEffect(() => {
+//   alert("Count is updated")
+
+//   return() => {
+//     alert("Count is unmounted from UI")
+//   }
+// }, [count])
+
+
+// function handleClick(){
+//   setCount(count + 1);
+// }
+
+// function handleClickTotal(){
+//   setTotal(total + 1);
+// }
 
   return (
     <div>
-      <button onClick = {handleClick}>
-        update count
+      {/* <LoggerComponent /> */}
+      {/* <TimeComponent /> */}
+      {/* <DataFetcher/> */}
+      {/* <ResizeComponent/> */}
+      {/* <MultiEffectComponent></MultiEffectComponent> */}
+      {/* <button onClick = {handleClick}>
+       update count
       </button>
       <br />
       Count is: {count}
@@ -69,7 +91,7 @@ function handleClickTotal(){
         update total
       </button>
       <br />
-      Total is: {total}
+      Total is: {total} */} 
     </div>
   )
 }
