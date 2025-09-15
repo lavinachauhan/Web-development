@@ -77,7 +77,7 @@ function App() {
   return (
     <div>
       {/* <LoggerComponent /> */}
-      {/* <TimeComponent /> */}
+      {/* <TimeComponent />
       {/* <DataFetcher/> */}
       {/* <ResizeComponent/> */}
       {/* <MultiEffectComponent></MultiEffectComponent> */}
