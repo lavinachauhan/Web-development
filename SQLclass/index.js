@@ -53,6 +53,8 @@ let getRandomUser = () => {
 
 // connection.end();
 
+
+// home route
 // GET/ fetch & show total number of users on our app
 app.get("/", (req, res) => {
     let q = `SELECT count(*) FROM user`;
@@ -67,6 +69,24 @@ app.get("/", (req, res) => {
     } catch(err){
         console.log(err);
         res.send("some error in database");
+    } 
+});
+
+// show users route
+// GET route
+app.get("/users", (req, res) => {
+    let q = `SELECT * FROM user`; 
+    try{
+        connection.query(q, (err, result) => {
+            if(err) throw err;
+            // res.send("All data acepted");
+            // res.send(result);
+            let users = result;
+            res.render("showusers.ejs", {users});
+        })
+    } catch(err){
+        console.log(err);
+        res.send("Some error in database");
     }
 });
 
