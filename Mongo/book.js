@@ -85,6 +85,6 @@ Book.findByIdAndUpdate("68d806ac4dc0ee534a6ef201", {Price : -500}, {new :true, r
     console.log(res)
 })
 .catch((err) => {
-    console.log(err.errors)
+    console.log(err.errors) 
 })
 

@@ -143,6 +143,10 @@ app.patch("/user/:id/", (req, res) => {
         console.log(err);
         res.send("Some error in database");
     }
+
+
+    // add new user -> post
+    // deleter user if correct email and passweord is added
 })
 app.listen("8080", () => {
     console.log("Server is listening to port 8080");
